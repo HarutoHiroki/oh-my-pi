@@ -3505,6 +3505,14 @@ export function openrouterModelManagerOptions(config?: OpenRouterModelManagerCon
 					}),
 				]);
 
+			// A failed /models must fail the whole discovery: under dynamicModelsAuthoritative a partial roster prunes all bundled chat rows.
+			if (chatModels === null) {
+				logger.warn("OpenRouter chat model discovery unavailable; preserving bundled catalog", {
+					endpoint: `${baseUrl}/models`,
+				});
+				return null;
+			}
+
 			if (imageModels === null) {
 				logger.warn("OpenRouter image model discovery unavailable; preserving chat model discovery", {
 					endpoint: `${baseUrl}/images/models`,
