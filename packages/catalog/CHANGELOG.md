@@ -28,6 +28,7 @@
 ### Changed
 
 - Cursor's model list now comes from the account's own catalog: one entry per model lane with its real context window, image support, and effort ladder, only models the account can run, and Cursor's account default marked ([#11613](https://github.com/can1357/oh-my-pi/pull/11613) by [@will-bogusz](https://github.com/will-bogusz)).
+- OpenRouter's model list now reflects the live `/models` endpoint: models the endpoint no longer serves are no longer selectable ([#14026](https://github.com/can1357/oh-my-pi/pull/14026) by [@HarutoHiroki](https://github.com/HarutoHiroki)).
 
 ### Fixed
 
